@@ -1,0 +1,12 @@
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 3rem; }
+.filterBtn { background: none; border: 1px solid #ccc; padding: 0.5rem 1.5rem; border-radius: 20px; cursor: pointer; transition: var(--transition); }
+.filterBtn:hover, .active { background: var(--primary); color: white; border-color: var(--primary); }
+.grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1rem; }
+.gridItem { border: none; padding: 0; overflow: hidden; cursor: pointer; border-radius: 8px; }
+.gridItem img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.gridItem:hover img { transform: scale(1.1); }
+.lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; z-index: 2000; padding: 2rem; cursor: pointer; }
+.lightbox img { max-width: 90%; max-height: 80vh; object-fit: contain; }
+.close { position: absolute; top: 20px; right: 30px; color: white; font-size: 3rem; cursor: pointer; }
+@media (min-width: 576px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 992px) { .grid { grid-template-columns: repeat(3, 1fr); } }

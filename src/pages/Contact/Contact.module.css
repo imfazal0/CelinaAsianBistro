@@ -1,0 +1,7 @@
+.grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
+.info p { margin-bottom: 0.5rem; }
+.form { background: white; padding: 2rem; border-radius: 8px; box-shadow: var(--shadow); }
+.formGroup { margin-bottom: 1.5rem; }
+.formGroup label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+.formGroup input, .formGroup textarea { width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; }
+@media (min-width: 992px) { .grid { grid-template-columns: 1fr 1fr; } }

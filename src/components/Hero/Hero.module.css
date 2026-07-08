@@ -1,0 +1,6 @@
+.hero { min-height: 100vh; background-size: cover; background-position: center; display: flex; align-items: center; position: relative; }
+.overlay { background-color: rgba(0,0,0,0.6); width: 100%; padding: 6rem 0; }
+.hero h1 { color: var(--white); font-size: 3rem; margin-bottom: 1rem; }
+.hero p { color: #eee; font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; }
+.buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+@media (min-width: 768px) { .hero h1 { font-size: 4.5rem; } }

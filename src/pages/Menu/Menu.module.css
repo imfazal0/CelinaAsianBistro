@@ -1,0 +1,5 @@
+.categorySection { margin-bottom: 4rem; }
+.categoryTitle { font-size: 2rem; margin-bottom: 2rem; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 0.5rem; }
+.dishGrid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 768px) { .dishGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 992px) { .dishGrid { grid-template-columns: repeat(3, 1fr); } }
