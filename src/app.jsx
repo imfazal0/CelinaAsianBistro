@@ -16,6 +16,7 @@ import NotFound from './pages/NotFound/NotFound.jsx'
 
 export function App() {
   const [route, setRoute] = useState(window.location.pathname)
+  const base = import.meta.env.BASE_URL; // Gets '/restaurant-website/' from vite.config.js
 
   useEffect(() => {
     const onRouteChange = (e) => {
@@ -31,14 +32,14 @@ export function App() {
       <Header currentPath={route} />
       <main>
         <Router onChange={e => setRoute(e.url)}>
-          <Home path="/" />
-          <Menu path="/menu" />
-          <About path="/about" />
-          <Gallery path="/gallery" />
-          <Reviews path="/reviews" />
-          <Contact path="/contact" />
-          <Privacy path="/privacy" />
-          <Terms path="/terms" />
+          <Home path={base} />
+          <Menu path={`${base}menu`} />
+          <About path={`${base}about`} />
+          <Gallery path={`${base}gallery`} />
+          <Reviews path={`${base}reviews`} />
+          <Contact path={`${base}contact`} />
+          <Privacy path={`${base}privacy`} />
+          <Terms path={`${base}terms`} />
           <NotFound default />
         </Router>
       </main>

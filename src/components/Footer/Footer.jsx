@@ -2,6 +2,8 @@ import { h } from 'preact'
 import styles from './Footer.module.css'
 import restaurantData from '../../data/restaurant.json'
 
+const base = import.meta.env.BASE_URL;
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -19,10 +21,10 @@ export default function Footer() {
           <div>
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="/menu">Menu</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/gallery">Gallery</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href={`${base}menu`}>Menu</a></li>
+              <li><a href={`${base}about`}>About Us</a></li>
+              <li><a href={`${base}gallery`}>Gallery</a></li>
+              <li><a href={`${base}contact`}>Contact</a></li>
             </ul>
           </div>
           <div>
@@ -37,7 +39,7 @@ export default function Footer() {
         </div>
         <div className={styles.bottomBar}>
           <p>&copy; {new Date().getFullYear()} {restaurantData.name}. All rights reserved.</p>
-          <div><a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></div>
+          <div><a href={`${base}privacy`}>Privacy Policy</a> | <a href={`${base}terms`}>Terms of Service</a></div>
         </div>
       </div>
     </footer>

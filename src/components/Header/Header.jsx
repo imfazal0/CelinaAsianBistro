@@ -3,13 +3,15 @@ import { useState, useEffect } from 'preact/hooks'
 import styles from './Header.module.css'
 import restaurantData from '../../data/restaurant.json'
 
+const base = import.meta.env.BASE_URL;
+
 const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'Menu', path: '/menu' },
-  { name: 'About', path: '/about' },
-  { name: 'Gallery', path: '/gallery' },
-  { name: 'Reviews', path: '/reviews' },
-  { name: 'Contact', path: '/contact' }
+  { name: 'Home', path: base },
+  { name: 'Menu', path: `${base}menu` },
+  { name: 'About', path: `${base}about` },
+  { name: 'Gallery', path: `${base}gallery` },
+  { name: 'Reviews', path: `${base}reviews` },
+  { name: 'Contact', path: `${base}contact` }
 ]
 
 export default function Header({ currentPath }) {
@@ -25,7 +27,8 @@ export default function Header({ currentPath }) {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div class={`container ${styles.navContainer}`}>
-        <a href="/" class={styles.logo}>{restaurantData.name}</a>
+        {/* Updated Logo Link */}
+        <a href={base} class={styles.logo}>{restaurantData.name}</a>
         
         <nav class={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
           {navLinks.map(link => (
